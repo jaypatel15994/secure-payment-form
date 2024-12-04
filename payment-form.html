@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="formContainer">
+            <h1>Payment Info.</h1>
+            <form id="paymentForm" method="post">
+                <span class="error-text"> Form error will be shown here! </span>
+
+                <label for="cardName"> Name on Card </label>
+                <input type="text" id="cardName" name="cardName" required placeholder="John Doe"/>
+
+                <label for="cardNumber"> Card Number </label>
+                <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234 5678 9000 1234"/>
+
+                <label for="cardExpiry"> Expiration Date </label>
+                <input type="month" id="cardExpiry" name="cardExpiry" required/>
+
+                <label for="cardCvv"> CVV </label>
+                <input type="text" id="cardCvv" name="cardCvv" required inputmode="numeric" pattern="[0-9]{3,4}" required placeholder="123"/>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
