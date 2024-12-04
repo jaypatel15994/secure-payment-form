@@ -10,7 +10,7 @@
         <div id="formContainer">
             <h1>Payment Info.</h1>
             <form id="paymentForm" method="post">
-                <span class="error-text"> Form error will be shown here! </span>
+                <span class="error-text" id="error-text"> Form error will be shown here! </span>
 
                 <label for="cardName"> Name on Card </label>
                 <input type="text" id="cardName" name="cardName" required placeholder="John Doe"/>
@@ -27,5 +27,7 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
+
+        <script src="form-validation.js"></script>
     </body>
 </html>
