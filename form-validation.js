@@ -23,12 +23,12 @@ document.getElementById("paymentForm").addEventListener("submit", function (even
     // Expiration Date validation
     const cardExpiry = document.getElementById("cardExpiry").value;
     const arrayExpiry = cardExpiry.split('-');
-    const monthExpiry = arrayExpiry.pop();
-    const yearExpiry = arrayExpiry.shift();
+    const monthExpiry = parseInt(arrayExpiry.pop());
+    const yearExpiry = parseInt(arrayExpiry.shift());
     if (!cardExpiry) {
         errorMessage += "Expiration date field is required. ";
         valid = false;
-    } else if (new Date(yearExpiry, monthExpiry + 1, 0) < new Date()) {
+    } else if (new Date(yearExpiry, monthExpiry, 0) < new Date()) {
         errorMessage += "Expiration date field must be in future. ";
         valid = false;
     }
